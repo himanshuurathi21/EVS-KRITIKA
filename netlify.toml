@@ -1,0 +1,15 @@
+[build]
+  publish = "dist"
+  command = "echo \"Using the prebuilt static files committed in dist\""
+
+# SPA fallback so client-side routes work on direct visits and refresh.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Fingerprinted build assets can be cached aggressively.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

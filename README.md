@@ -36,9 +36,20 @@ Requires Node.js 18 or newer. The repository ships the production build in `dist
 dist/                  Production build (HTML, CSS, JS, favicon)
 dist/404.html          GitHub Pages fallback for client-side routes
 scripts/serve.js       Zero-dependency static server with SPA fallback
+netlify.toml           Netlify publish directory and SPA redirect rules
 .github/workflows/     GitHub Pages deployment workflow
 docs/FIXES.md          Bugs found during the review and how they were fixed
 ```
+
+## Deploy to Netlify
+
+Import the GitHub repository into Netlify. `netlify.toml` already configures everything:
+
+- **Build command:** none (the production build is committed in `dist/`)
+- **Publish directory:** `dist`
+- **SPA fallback:** all routes rewrite to `index.html`
+
+No environment variables or API keys are required. Every push to `main` triggers a new deploy.
 
 ## Deploy to GitHub Pages
 
