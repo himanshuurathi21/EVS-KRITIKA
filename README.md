@@ -42,11 +42,13 @@ docs/FIXES.md          Bugs found during the review and how they were fixed
 
 ## Deploy to GitHub Pages
 
-The included workflow publishes `dist/` whenever `main` is updated. In the repository settings, open **Pages** and set the source to **GitHub Actions**. The expected URL is:
+The included workflow publishes `dist/` to the `gh-pages` branch whenever `main` is updated. To serve the site:
 
-<https://himanshuurathi21.github.io/EVS-KRITIKA/>
+1. Open **Settings → Pages**.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Select the `gh-pages` branch and the `/ (root)` folder.
 
-Asset URLs are relative and the router derives its basename from the deployed asset path, so the same build works both at a domain root and under the repository sub-path.
+The expected URL is <https://himanshuurathi21.github.io/EVS-KRITIKA/>. Asset URLs are relative and the router derives its basename from the deployed asset path, so the same build works both at a domain root and under the repository sub-path.
 
 ## Demo data and reset
 
