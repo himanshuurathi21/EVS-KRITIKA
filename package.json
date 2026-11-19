@@ -1,0 +1,14 @@
+{
+  "name": "evs-kritika",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pollution Hotspot Mapping System — MSE academic project prototype",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "dev": "node scripts/serve.js",
+    "preview": "node scripts/serve.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
